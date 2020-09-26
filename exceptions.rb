@@ -7,3 +7,8 @@ end
 class MaxTweetsException < StandardError
 
 end
+
+# exception for if a single generated tweet character count exceeded 140
+class TweetExceedMaxCharCountException < StandardError
+
+end
