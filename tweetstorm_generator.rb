@@ -7,7 +7,7 @@ class TweetstormGenerator
   MAX_TWEET_BUFFER = MAX_TWEET_CHAR_COUNT - MAX_PREFIX_COUNT
 
   def self.run(tweet_str)
-    return tweet_str if tweet_str.size <= 140
+    return [tweet_str] if tweet_str.size <= MAX_TWEET_CHAR_COUNT
 
     tweets = generate_tweet_chunks(tweet_str)
     append_prefix_to_tweets!(tweets)

@@ -3,10 +3,10 @@ require_relative 'tweetstorm_generator'
 
 if ARGV[0].nil?
   p "Incorrect argument, expecting a String"
-end
+else
+  tweets = TweetstormGenerator.run(ARGV[0])
 
-tweets = TweetstormGenerator.run(ARGV[0])
-
-tweets.each do |tweet|
-  p tweet
+  tweets.each do |tweet|
+    p tweet
+  end
 end
