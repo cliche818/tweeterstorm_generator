@@ -26,7 +26,7 @@ class TweetstormGenerator
       tweet_str.split(' ').each do |word|
         raise WordExceedCharCountException unless within_max_char_count?(word)
 
-        if tweet.empty? && within_max_char_count?(word)
+        if tweet.empty?
           tweet = word
         elsif within_max_char_count?("#{tweet} #{word}")
           tweet = "#{tweet} #{word}"

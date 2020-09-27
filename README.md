@@ -58,6 +58,7 @@ Will output
 then I will need to make adjustments to it and the subsequent generated tweet for more space because to add the prefix, I will need at least 4 more characters.
 5) I am throwing an exception if a single word exceeds 140 character count because of assumption #2
 6) Because of assumption #4, the script can't handle cases where 100 or more tweets are generated since there might not be enough room to add the prefix like (100/101), an exception is thrown in this case
+7) I don't need to preserve new lines/line breaks (paragraphs) because unsure how to pass this in from command line (ex: passing in \n, ruby code sees it as the 2 characters)
 
 
 #### Code design
