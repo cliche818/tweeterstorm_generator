@@ -6,6 +6,8 @@ if ARGV[0].nil?
 else
   tweets = TweetstormGenerator.run(ARGV[0])
 
+  p '-----------Tweets---------------------------'
+
   tweets.each do |tweet|
     p tweet
   end
